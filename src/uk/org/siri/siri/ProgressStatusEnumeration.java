@@ -5,70 +5,122 @@
 // Generated on: 2010.11.14 at 03:28:36 PM PST 
 //
 
-
 package uk.org.siri.siri;
 
 public enum ProgressStatusEnumeration {
 
+	/**
+	 * Service is on time.
+	 * 
+	 */
 
-    /**
-     * Service is on time.
-     * 
-     */
-    
-    ON_TIME("onTime"),
+	ON_TIME("onTime"),
 
-    /**
-     * Service is earlier than expected
-     * 
-     */
-    
-    EARLY("early"),
+	/**
+	 * Service is earlier than expected
+	 * 
+	 */
 
-    /**
-     * Service is delayed.
-     * 
-     */
-    
-    DELAYED("delayed"),
+	EARLY("early"),
 
-    /**
-     * Service is on cancelled.
-     * 
-     */
-    
-    CANCELLED("cancelled"),
+	/**
+	 * Service is delayed.
+	 * 
+	 */
 
-    /**
-     * Service has arrived.
-     * 
-     */
-    
-    ARRIVED("arrived"),
+	DELAYED("delayed"),
 
-    /**
-     * There is no information about the service
-     * 
-     */
-    
-    NO_REPORT("noReport");
-    private final String value;
+	/**
+	 * Service is on cancelled.
+	 * 
+	 */
 
-    ProgressStatusEnumeration(String v) {
-        value = v;
-    }
+	CANCELLED("cancelled"),
 
-    public String value() {
-        return value;
-    }
+	/**
+	 * Service has arrived.
+	 * 
+	 */
 
-    public static ProgressStatusEnumeration fromValue(String v) {
-        for (ProgressStatusEnumeration c: ProgressStatusEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	ARRIVED("arrived"),
+
+	/**
+	 * MTA-specific value
+	 * 
+	 * StopMonitoring results include buses that are scheduled to stop at the
+	 * monitored stop according to the schedule for their assigned blocks, even
+	 * if they are not yet on the trip that will serve the monitored stop. This
+	 * occurs only when those buses have a block-level assignment; otherwise,
+	 * they are not included until they reach the terminal and present evidence
+	 * that they will continue on to serve the monitored stop. In general, this
+	 * means that StopMonitoring requests will have more results. (see diagram
+	 * here: http://bustime.mta.info/wiki/Developers/ChangeLog)
+	 * 
+	 * The ProgressStatus field will include a prevTrip flag, indicating that
+	 * the bus is still on a trip prior to the one that will serve the monitored
+	 * stop. The prevTrip flag may also be combined with layover when the bus is
+	 * laying over and scheduled to depart.
+	 * 
+	 * See discussion here for more info:
+	 * https://groups.google.com/forum/?fromgroups=#!topic/
+	 * mtadeveloperresources/PKyBzv5fcrU
+	 */
+
+	PREV_TRIP("prevTrip"),
+
+	/**
+	 * MTA-specific value
+	 * 
+	 * StopMonitoring results include buses that are scheduled to stop at the
+	 * monitored stop according to the schedule for their assigned blocks, even
+	 * if they are not yet on the trip that will serve the monitored stop. This
+	 * occurs only when those buses have a block-level assignment; otherwise,
+	 * they are not included until they reach the terminal and present evidence
+	 * that they will continue on to serve the monitored stop. In general, this
+	 * means that StopMonitoring requests will have more results. (see diagram
+	 * here: http://bustime.mta.info/wiki/Developers/ChangeLog, or direct link -
+	 * http://xwiki.staging.obanyc.com/bin/download/Developers/ChangeLog/wraparound
+	 * /png)
+	 * 
+	 * The ProgressStatus field will include a prevTrip flag, indicating that
+	 * the bus is still on a trip prior to the one that will serve the monitored
+	 * stop. The prevTrip flag may also be combined with layover when the bus is
+	 * laying over and scheduled to depart.
+	 * 
+	 * See discussion here for more info:
+	 * https://groups.google.com/forum/?fromgroups=#!topic/
+	 * mtadeveloperresources/PKyBzv5fcrU
+	 */
+	LAYOVER("layover"),
+
+	/**
+	 * There is no information about the service
+	 * 
+	 */
+
+	NO_REPORT("noReport");
+
+	private final String value;
+
+	ProgressStatusEnumeration(String v) {
+		value = v;
+	}
+
+	public static ProgressStatusEnumeration fromString(String v) {
+		if (v != null) {
+			for (ProgressStatusEnumeration c : ProgressStatusEnumeration
+					.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+					return c;
+				}
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

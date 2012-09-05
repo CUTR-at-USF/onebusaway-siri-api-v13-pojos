@@ -16,23 +16,27 @@ public enum DepartureBoardingActivityEnumeration {
     NO_BOARDING("noBoarding"),
     
     PASS_THRU("passThru");
+    
     private final String value;
 
     DepartureBoardingActivityEnumeration(String v) {
-        value = v;
-    }
+		value = v;
+	}
+	
+	public static DepartureBoardingActivityEnumeration fromString(String v) {
+		if (v != null) {
+			for (DepartureBoardingActivityEnumeration c : DepartureBoardingActivityEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public String value() {
-        return value;
-    }
-
-    public static DepartureBoardingActivityEnumeration fromValue(String v) {
-        for (DepartureBoardingActivityEnumeration c: DepartureBoardingActivityEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

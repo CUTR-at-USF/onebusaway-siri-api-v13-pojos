@@ -25,11 +25,11 @@ public class AffectedVehicleJourney {
 
     protected AffectedOperator operator;
 
-    protected LineRef lineRef;
+    protected String lineRef;
 
     protected NaturalLanguageString publishedLineName;
 
-    protected DirectionRef directionRef;
+    protected String directionRef;
 
     protected List<AffectedStopPoint> origins;
 
@@ -159,7 +159,7 @@ public class AffectedVehicleJourney {
      *     {@link LineRef }
      *     
      */
-    public LineRef getLineRef() {
+    public String getLineRef() {
         return lineRef;
     }
 
@@ -171,7 +171,7 @@ public class AffectedVehicleJourney {
      *     {@link LineRef }
      *     
      */
-    public void setLineRef(LineRef value) {
+    public void setLineRef(String value) {
         this.lineRef = value;
     }
 
@@ -207,7 +207,7 @@ public class AffectedVehicleJourney {
      *     {@link DirectionRef }
      *     
      */
-    public DirectionRef getDirectionRef() {
+    public String getDirectionRef() {
         return directionRef;
     }
 
@@ -219,7 +219,7 @@ public class AffectedVehicleJourney {
      *     {@link DirectionRef }
      *     
      */
-    public void setDirectionRef(DirectionRef value) {
+    public void setDirectionRef(String value) {
         this.directionRef = value;
     }
 

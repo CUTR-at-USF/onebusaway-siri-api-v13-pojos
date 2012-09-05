@@ -1,5 +1,6 @@
 package uk.org.siri.siri;
 
+import java.util.Date;
 import java.util.List;
 
 public class MonitoredVehicleJourney {
@@ -13,18 +14,36 @@ public class MonitoredVehicleJourney {
 	private String originRef;
 	private String destinationRef;
 	private String destinationName;
+	private Date originAimedDepartureTime;
 		
 	private List<SituationRef> situationRef;
 	
 	private boolean monitored;
 	private VehicleLocation vehicleLocation;
 	private float bearing;
-	private String progressRate;
+	private ProgressRateEnumeration progressRate;
+	private ProgressStatusEnumeration progressStatus;
 	private String vehicleRef;
 	private MonitoredCall monitoredCall;	
 	private String blockRef;
 	
-	private OnwardCalls onwardCalls;
+	private OnwardCalls onwardCalls;	
+	
+	public void setProgressStatus(ProgressStatusEnumeration progressStatus) {
+		this.progressStatus = progressStatus;
+	}
+	
+	public ProgressStatusEnumeration getProgressStatus() {
+		return progressStatus;
+	}
+	
+	public Date getOriginAimedDepartureTime() {
+		return originAimedDepartureTime;
+	}
+	
+	public void setOriginAimedDepartureTime(Date originAimedDepartureTime) {
+		this.originAimedDepartureTime = originAimedDepartureTime;
+	}
 	
 	public OnwardCalls getOnwardCalls() {
 		return onwardCalls;
@@ -83,7 +102,7 @@ public class MonitoredVehicleJourney {
 		return originRef;
 	}
 	
-	public String getProgressRate() {
+	public ProgressRateEnumeration getProgressRate() {
 		return progressRate;
 	}
 	
@@ -152,7 +171,7 @@ public class MonitoredVehicleJourney {
 		this.originRef = originRef;
 	}
 	
-	public void setProgressRate(String progressRate) {
+	public void setProgressRate(ProgressRateEnumeration progressRate) {
 		this.progressRate = progressRate;
 	}
 	

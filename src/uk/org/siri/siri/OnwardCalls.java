@@ -24,7 +24,7 @@ public class OnwardCalls {
 	
 	protected ProgressStatusEnumeration arrivalStatus;
 	
-	protected NaturalLanguageString arrivalPlatformName;
+	protected String arrivalPlatformName;
 	
 	protected ArrivalBoardingActivityEnumeration arrivalBoardingActivity;
 		
@@ -34,7 +34,7 @@ public class OnwardCalls {
 	
 	protected ProgressStatusEnumeration departureStatus;
 	
-	protected NaturalLanguageString departurePlatformName;
+	protected String departurePlatformName;
 	
 	protected DepartureBoardingActivityEnumeration departureBoardingActivity;
 	
@@ -155,7 +155,7 @@ public class OnwardCalls {
 	 * @return possible object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public NaturalLanguageString getArrivalPlatformName() {
+	public String getArrivalPlatformName() {
 		return arrivalPlatformName;
 	}
 
@@ -166,7 +166,7 @@ public class OnwardCalls {
 	 *            allowed object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public void setArrivalPlatformName(NaturalLanguageString value) {
+	public void setArrivalPlatformName(String value) {
 		this.arrivalPlatformName = value;
 	}
 
@@ -261,7 +261,7 @@ public class OnwardCalls {
 	 * @return possible object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public NaturalLanguageString getDeparturePlatformName() {
+	public String getDeparturePlatformName() {
 		return departurePlatformName;
 	}
 
@@ -272,7 +272,7 @@ public class OnwardCalls {
 	 *            allowed object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public void setDeparturePlatformName(NaturalLanguageString value) {
+	public void setDeparturePlatformName(String value) {
 		this.departurePlatformName = value;
 	}
 

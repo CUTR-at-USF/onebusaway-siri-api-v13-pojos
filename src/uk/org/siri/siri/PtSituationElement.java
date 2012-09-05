@@ -42,7 +42,7 @@ public class PtSituationElement extends SituationElement {
 
 	protected PublicEventTypeEnum publicEventReason;
 
-	protected NaturalLanguageString reasonName;
+	protected String reasonName;
 
 	protected SeverityEnumeration severity;
 
@@ -64,15 +64,15 @@ public class PtSituationElement extends SituationElement {
 
 	protected String language;
 
-	protected DefaultedText summary;
+	protected String summary;
 
-	protected DefaultedText description;
+	protected String description;
 
-	protected DefaultedText detail;
+	protected String detail;
 
-	protected DefaultedText advice;
+	protected String advice;
 
-	protected DefaultedText internal;
+	protected String internal;
 
 	protected uk.org.siri.siri.RoadSituationElement.Images images;
 
@@ -448,7 +448,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public NaturalLanguageString getReasonName() {
+	public String getReasonName() {
 		return reasonName;
 	}
 
@@ -459,7 +459,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link NaturalLanguageString }
 	 * 
 	 */
-	public void setReasonName(NaturalLanguageString value) {
+	public void setReasonName(String value) {
 		this.reasonName = value;
 	}
 
@@ -690,7 +690,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public DefaultedText getSummary() {
+	public String getSummary() {
 		return summary;
 	}
 
@@ -701,7 +701,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setSummary(DefaultedText value) {
+	public void setSummary(String value) {
 		this.summary = value;
 	}
 
@@ -711,7 +711,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public DefaultedText getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -722,7 +722,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setDescription(DefaultedText value) {
+	public void setDescription(String value) {
 		this.description = value;
 	}
 
@@ -732,7 +732,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public DefaultedText getDetail() {
+	public String getDetail() {
 		return detail;
 	}
 
@@ -743,7 +743,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setDetail(DefaultedText value) {
+	public void setDetail(String value) {
 		this.detail = value;
 	}
 
@@ -753,7 +753,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public DefaultedText getAdvice() {
+	public String getAdvice() {
 		return advice;
 	}
 
@@ -764,7 +764,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setAdvice(DefaultedText value) {
+	public void setAdvice(String value) {
 		this.advice = value;
 	}
 
@@ -774,7 +774,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public DefaultedText getInternal() {
+	public String getInternal() {
 		return internal;
 	}
 
@@ -785,7 +785,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setInternal(DefaultedText value) {
+	public void setInternal(String value) {
 		this.internal = value;
 	}
 

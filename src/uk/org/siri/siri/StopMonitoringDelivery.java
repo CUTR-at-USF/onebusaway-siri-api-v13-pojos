@@ -1,35 +1,36 @@
 
 package uk.org.siri.siri;
 
+import java.util.Date;
 import java.util.List;
 
 public class StopMonitoringDelivery{
-   	private List monitoredStopVisit;
-   	private String responseTimestamp;
-   	private String validUntil;
-   	
-   	
- 	public List getMonitoredStopVisit(){
+	
+   	private List<MonitoredStopVisit> monitoredStopVisit;
+   	private Date responseTimestamp;
+   	private Date validUntil;
+   	   	
+ 	public List<MonitoredStopVisit> getMonitoredStopVisit(){
 		return this.monitoredStopVisit;
 	}
    	
-	public void setMonitoredStopVisit(List monitoredStopVisit){
+	public void setMonitoredStopVisit(List<MonitoredStopVisit> monitoredStopVisit){
 		this.monitoredStopVisit = monitoredStopVisit;
 	}
    	
- 	public String getResponseTimestamp(){
+ 	public Date getResponseTimestamp(){
 		return this.responseTimestamp;
 	}
    	
-	public void setResponseTimestamp(String responseTimestamp){
+	public void setResponseTimestamp(Date responseTimestamp){
 		this.responseTimestamp = responseTimestamp;
 	}
    	
- 	public String getValidUntil(){
+ 	public Date getValidUntil(){
 		return this.validUntil;
 	}
    	
-	public void setValidUntil(String validUntil){
+	public void setValidUntil(Date validUntil){
 		this.validUntil = validUntil;
 	}
 }

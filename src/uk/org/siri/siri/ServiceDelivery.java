@@ -1,20 +1,21 @@
 package uk.org.siri.siri;
 
+import java.util.Date;
 import java.util.List;
 
 public class ServiceDelivery {
-	private String responseTimestamp;
+	private Date responseTimestamp;
 	private List<VehicleMonitoringDelivery> vehicleMonitoringDelivery;
 	private List<StopMonitoringDelivery> stopMonitoringDelivery;
 	private List<SituationExchangeDelivery> situationExchangeDelivery;
 
 	
-	public String getResponseTimestamp() {
+	public Date getResponseTimestamp() {
 		return this.responseTimestamp;
 	}
 
 	
-	public void setResponseTimestamp(String responseTimestamp) {
+	public void setResponseTimestamp(Date responseTimestamp) {
 		this.responseTimestamp = responseTimestamp;
 	}
 

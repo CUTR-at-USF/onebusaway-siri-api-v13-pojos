@@ -20,7 +20,7 @@ public class AbstractSituationElement {
    
     protected ParticipantRef participantRef;
    
-    protected EntryQualifier situationNumber;
+    protected String situationNumber;
    
     protected CountryRef updateCountryRef;
    
@@ -108,7 +108,7 @@ public class AbstractSituationElement {
      *     {@link EntryQualifier }
      *     
      */
-    public EntryQualifier getSituationNumber() {
+    public String getSituationNumber() {
         return situationNumber;
     }
 
@@ -120,7 +120,7 @@ public class AbstractSituationElement {
      *     {@link EntryQualifier }
      *     
      */
-    public void setSituationNumber(EntryQualifier value) {
+    public void setSituationNumber(String value) {
         this.situationNumber = value;
     }
 

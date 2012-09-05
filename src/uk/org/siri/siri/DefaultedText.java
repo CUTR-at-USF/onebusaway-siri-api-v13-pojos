@@ -10,6 +10,15 @@ package uk.org.siri.siri;
 public class DefaultedText extends NaturalLanguageString {
 
 	
+	public DefaultedText(String value) {
+		super(value);
+	}
+	
+	public DefaultedText(String value, String lang) {
+		super(value, lang);
+	}
+	
+
 	protected Boolean overridden;
 
 	/**

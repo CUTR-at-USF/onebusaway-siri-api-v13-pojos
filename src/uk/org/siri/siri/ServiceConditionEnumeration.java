@@ -199,23 +199,27 @@ public enum ServiceConditionEnumeration {
      */
     
     UNDEFINED_SERVICE_INFORMATION("undefinedServiceInformation");
+    
     private final String value;
 
-    ServiceConditionEnumeration(String v) {
-        value = v;
-    }
+	ServiceConditionEnumeration(String v) {
+		value = v;
+	}
+	
+	public static ServiceConditionEnumeration fromString(String v) {
+		if (v != null) {
+			for (ServiceConditionEnumeration c : ServiceConditionEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public String value() {
-        return value;
-    }
-
-    public static ServiceConditionEnumeration fromValue(String v) {
-        for (ServiceConditionEnumeration c: ServiceConditionEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }
