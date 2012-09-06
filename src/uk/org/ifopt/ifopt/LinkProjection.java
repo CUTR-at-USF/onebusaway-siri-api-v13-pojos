@@ -5,141 +5,72 @@
 // Generated on: 2010.11.14 at 03:28:36 PM PST 
 //
 
-
 package uk.org.ifopt.ifopt;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
+public class LinkProjection extends AbstractProjection {
+	
+	protected LinkProjection.Line line;
 
-/**
- * Type for Projection as a geospatial polyline.
- * 
- * <p>Java class for LinkProjectionStructure complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="LinkProjectionStructure">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.ifopt.org.uk/ifopt}AbstractProjection">
- *       &lt;sequence>
- *         &lt;element name="Line" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://www.ifopt.org.uk/ifopt}PointProjection" maxOccurs="unbounded" minOccurs="2"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinkProjectionStructure", propOrder = {
-    "line"
-})
-public class LinkProjection
-    extends AbstractProjection
-{
+	/**
+	 * Gets the value of the line property.
+	 * 
+	 * @return possible object is {@link LinkProjection.Line }
+	 * 
+	 */
+	public LinkProjection.Line getLine() {
+		return line;
+	}
 
-    @XmlElement(name = "Line")
-    protected LinkProjection.Line line;
+	/**
+	 * Sets the value of the line property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link LinkProjection.Line }
+	 * 
+	 */
+	public void setLine(LinkProjection.Line value) {
+		this.line = value;
+	}
 
-    /**
-     * Gets the value of the line property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link LinkProjection.Line }
-     *     
-     */
-    public LinkProjection.Line getLine() {
-        return line;
-    }
+	
+	public static class Line {
 
-    /**
-     * Sets the value of the line property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link LinkProjection.Line }
-     *     
-     */
-    public void setLine(LinkProjection.Line value) {
-        this.line = value;
-    }
+	
+		protected List<PointProjection> pointProjection;
 
+		/**
+		 * Gets the value of the pointProjection property.
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a
+		 * snapshot. Therefore any modification you make to the returned list
+		 * will be present inside the JAXB object. This is why there is not a
+		 * <CODE>set</CODE> method for the pointProjection property.
+		 * 
+		 * <p>
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * <pre>
+		 * getPointProjection().add(newItem);
+		 * </pre>
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list
+		 * {@link PointProjection }
+		 * 
+		 * 
+		 */
+		public List<PointProjection> getPointProjection() {
+			if (pointProjection == null) {
+				pointProjection = new ArrayList<PointProjection>();
+			}
+			return this.pointProjection;
+		}
 
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://www.ifopt.org.uk/ifopt}PointProjection" maxOccurs="unbounded" minOccurs="2"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "pointProjection"
-    })
-    public static class Line {
-
-        @XmlElement(name = "PointProjection", required = true)
-        protected List<PointProjection> pointProjection;
-
-        /**
-         * Gets the value of the pointProjection property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the pointProjection property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getPointProjection().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link PointProjection }
-         * 
-         * 
-         */
-        public List<PointProjection> getPointProjection() {
-            if (pointProjection == null) {
-                pointProjection = new ArrayList<PointProjection>();
-            }
-            return this.pointProjection;
-        }
-
-    }
+	}
 
 }

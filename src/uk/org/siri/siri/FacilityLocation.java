@@ -17,9 +17,9 @@ import uk.org.ifopt.ifopt.StopPlaceRef;
 public class FacilityLocation {
 
 
-    protected LineRef lineRef;
+    protected String lineRef;
 
-    protected StopPointRef stopPointRef;
+    protected String stopPointRef;
 
     protected String vehicleRef;
 
@@ -49,7 +49,7 @@ public class FacilityLocation {
      *     {@link LineRef }
      *     
      */
-    public LineRef getLineRef() {
+    public String getLineRef() {
         return lineRef;
     }
 
@@ -61,7 +61,7 @@ public class FacilityLocation {
      *     {@link LineRef }
      *     
      */
-    public void setLineRef(LineRef value) {
+    public void setLineRef(String value) {
         this.lineRef = value;
     }
 
@@ -73,7 +73,7 @@ public class FacilityLocation {
      *     {@link StopPointRef }
      *     
      */
-    public StopPointRef getStopPointRef() {
+    public String getStopPointRef() {
         return stopPointRef;
     }
 
@@ -85,7 +85,7 @@ public class FacilityLocation {
      *     {@link StopPointRef }
      *     
      */
-    public void setStopPointRef(StopPointRef value) {
+    public void setStopPointRef(String value) {
         this.stopPointRef = value;
     }
 

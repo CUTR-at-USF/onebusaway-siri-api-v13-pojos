@@ -10,73 +10,17 @@ package uk.org.ifopt.acsb;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import uk.org.ifopt.ifopt.Extensions;
 
-
-/**
- * Type for Assesment
- * 
- * <p>Java class for AccessibilityAssessment complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="AccessibilityAssessment">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="MobilityImpairedAccess" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="Limitations" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AccessibilityLimitation" type="{http://www.ifopt.org.uk/acsb}AccessibilityLimitation" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Suitabilities" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Suitability" type="{http://www.ifopt.org.uk/acsb}Suitability" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.ifopt.org.uk/ifopt}Extensions" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AccessibilityAssessment", propOrder = {
-    "mobilityImpairedAccess",
-    "limitations",
-    "suitabilities",
-    "extensions"
-})
 public class AccessibilityAssessment {
 
-    @XmlElement(name = "MobilityImpairedAccess")
+
     protected boolean mobilityImpairedAccess;
-    @XmlElement(name = "Limitations")
+
     protected AccessibilityAssessment.Limitations limitations;
-    @XmlElement(name = "Suitabilities")
+
     protected AccessibilityAssessment.Suitabilities suitabilities;
-    @XmlElement(name = "Extensions", namespace = "http://www.ifopt.org.uk/ifopt")
+
     protected Extensions extensions;
 
     /**
@@ -202,33 +146,9 @@ public class AccessibilityAssessment {
 
     }
 
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Suitability" type="{http://www.ifopt.org.uk/acsb}Suitability" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "suitability"
-    })
     public static class Suitabilities {
 
-        @XmlElement(name = "Suitability", required = true)
+    
         protected List<Suitability> suitability;
 
         /**

@@ -13,7 +13,7 @@ import uk.org.ifopt.ifopt.LinkProjection;
 public class AffectedSection {
 
 
-    protected SectionRef sectionRef;
+    protected String sectionRef;
 
     protected LinkProjection linkProjection;
 
@@ -29,7 +29,7 @@ public class AffectedSection {
      *     {@link SectionRef }
      *     
      */
-    public SectionRef getSectionRef() {
+    public String getSectionRef() {
         return sectionRef;
     }
 
@@ -41,7 +41,7 @@ public class AffectedSection {
      *     {@link SectionRef }
      *     
      */
-    public void setSectionRef(SectionRef value) {
+    public void setSectionRef(String value) {
         this.sectionRef = value;
     }
 

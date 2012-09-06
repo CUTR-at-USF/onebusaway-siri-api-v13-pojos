@@ -5,37 +5,8 @@
 // Generated on: 2010.11.14 at 03:28:36 PM PST 
 //
 
-
 package uk.org.ifopt.ifopt;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
-
-
-/**
- * Type for a timeband.
- * 
- * <p>Java class for Timeband complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="Timeband">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.ifopt.org.uk/ifopt}HalfOpenTimeRange">
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Timeband")
-public class Timeband
-    extends HalfOpenTimeRange
-{
-
+public class Timeband extends HalfOpenTimeRange {
 
 }

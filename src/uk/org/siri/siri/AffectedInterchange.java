@@ -15,7 +15,7 @@ public class AffectedInterchange {
     
     protected InterchangeRef interchangeRef;
     
-    protected StopPointRef interchangeStopPointRef;
+    protected String interchangeStopPointRef;
     
     protected NaturalLanguageString interchangeStopPointName;
     
@@ -59,7 +59,7 @@ public class AffectedInterchange {
      *     {@link StopPointRef }
      *     
      */
-    public StopPointRef getInterchangeStopPointRef() {
+    public String getInterchangeStopPointRef() {
         return interchangeStopPointRef;
     }
 
@@ -71,7 +71,7 @@ public class AffectedInterchange {
      *     {@link StopPointRef }
      *     
      */
-    public void setInterchangeStopPointRef(StopPointRef value) {
+    public void setInterchangeStopPointRef(String value) {
         this.interchangeStopPointRef = value;
     }
 

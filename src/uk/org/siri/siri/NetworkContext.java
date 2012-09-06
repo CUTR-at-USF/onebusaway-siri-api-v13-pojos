@@ -10,44 +10,12 @@ package uk.org.siri.siri;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
-
-/**
- * Type for shared context.
- * 
- * <p>Java class for NetworkContext complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="NetworkContext">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Operator" type="{http://www.siri.org.uk/siri}AffectedOperator" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Network" type="{http://www.siri.org.uk/siri}Network" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkContext", propOrder = {
-    "operator",
-    "network"
-})
 public class NetworkContext {
 
-    @XmlElement(name = "Operator")
+
     protected List<AffectedOperator> operator;
-    @XmlElement(name = "Network")
+
     protected Network network;
 
     /**

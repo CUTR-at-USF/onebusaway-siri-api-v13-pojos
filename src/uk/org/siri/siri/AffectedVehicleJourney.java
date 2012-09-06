@@ -17,7 +17,7 @@ import uk.org.ifopt.acsb.AccessibilityAssessment;
 public class AffectedVehicleJourney {
 
 
-    protected List<VehicleJourneyRef> vehicleJourneyRef;
+    protected List<String> vehicleJourneyRef;
 
     protected List<DatedVehicleJourneyRef> datedVehicleJourneyRef;
 
@@ -67,9 +67,9 @@ public class AffectedVehicleJourney {
      * 
      * 
      */
-    public List<VehicleJourneyRef> getVehicleJourneyRef() {
+    public List<String> getVehicleJourneyRef() {
         if (vehicleJourneyRef == null) {
-            vehicleJourneyRef = new ArrayList<VehicleJourneyRef>();
+            vehicleJourneyRef = new ArrayList<String>();
         }
         return this.vehicleJourneyRef;
     }

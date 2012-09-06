@@ -13,7 +13,7 @@ import java.util.List;
 public class AffectedRoute {
 
     
-    protected RouteRef routeRef;
+    protected String routeRef;
     
     protected List<Direction> direction;
     
@@ -31,7 +31,7 @@ public class AffectedRoute {
      *     {@link RouteRef }
      *     
      */
-    public RouteRef getRouteRef() {
+    public String getRouteRef() {
         return routeRef;
     }
 
@@ -43,7 +43,7 @@ public class AffectedRoute {
      *     {@link RouteRef }
      *     
      */
-    public void setRouteRef(RouteRef value) {
+    public void setRouteRef(String value) {
         this.routeRef = value;
     }
 

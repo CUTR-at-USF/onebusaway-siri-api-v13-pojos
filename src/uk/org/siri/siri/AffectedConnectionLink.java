@@ -19,9 +19,9 @@ public class AffectedConnectionLink {
     
     protected Object allLines;
     
-    protected List<LineRef> lineRef;
+    protected List<String> lineRef;
     
-    protected StopPointRef connectingStopPointRef;
+    protected String connectingStopPointRef;
     
     protected NaturalLanguageString connectingStopPointName;
     
@@ -132,9 +132,9 @@ public class AffectedConnectionLink {
      * 
      * 
      */
-    public List<LineRef> getLineRef() {
+    public List<String> getLineRef() {
         if (lineRef == null) {
-            lineRef = new ArrayList<LineRef>();
+            lineRef = new ArrayList<String>();
         }
         return this.lineRef;
     }
@@ -147,7 +147,7 @@ public class AffectedConnectionLink {
      *     {@link StopPointRef }
      *     
      */
-    public StopPointRef getConnectingStopPointRef() {
+    public String getConnectingStopPointRef() {
         return connectingStopPointRef;
     }
 
@@ -159,7 +159,7 @@ public class AffectedConnectionLink {
      *     {@link StopPointRef }
      *     
      */
-    public void setConnectingStopPointRef(StopPointRef value) {
+    public void setConnectingStopPointRef(String value) {
         this.connectingStopPointRef = value;
     }
 

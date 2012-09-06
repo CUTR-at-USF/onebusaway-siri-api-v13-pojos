@@ -5,28 +5,22 @@
 // Generated on: 2010.11.14 at 03:28:36 PM PST 
 //
 
-
 package uk.org.ifopt.ifopt;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import uk.org.siri.siri.Coordinates;
 
-
 /**
- * Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates  or any GML compatible point coordinates  format.         
+ * Type for geospatial Position of a point. May be expressed in concrete WGS 84
+ * Coordinates or any GML compatible point coordinates format.
  * 
- * <p>Java class for PointProjection complex type.
+ * <p>
+ * Java class for PointProjection complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="PointProjection">
@@ -46,201 +40,168 @@ import uk.org.siri.siri.Coordinates;
  * 
  * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointProjection", propOrder = {
-    "longitude",
-    "latitude",
-    "altitude",
-    "coordinates",
-    "precision"
-})
-public class PointProjection
-    extends AbstractProjection
-{
 
-    @XmlElement(name = "Longitude")
-    protected BigDecimal longitude;
-    @XmlElement(name = "Latitude")
-    protected BigDecimal latitude;
-    @XmlElement(name = "Altitude")
-    protected BigDecimal altitude;
-    @XmlElement(name = "Coordinates")
-    protected Coordinates coordinates;
-    @XmlElement(name = "Precision")
-    protected BigInteger precision;
-    @XmlAttribute
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlSchemaType(name = "NMTOKEN")
-    protected String id;
-    @XmlAttribute
-    protected String srsName;
+public class PointProjection extends AbstractProjection {
 
-    /**
-     * Gets the value of the longitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getLongitude() {
-        return longitude;
-    }
 
-    /**
-     * Sets the value of the longitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setLongitude(BigDecimal value) {
-        this.longitude = value;
-    }
+	protected BigDecimal longitude;
 
-    /**
-     * Gets the value of the latitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getLatitude() {
-        return latitude;
-    }
+	protected BigDecimal latitude;
 
-    /**
-     * Sets the value of the latitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setLatitude(BigDecimal value) {
-        this.latitude = value;
-    }
+	protected BigDecimal altitude;
 
-    /**
-     * Gets the value of the altitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getAltitude() {
-        return altitude;
-    }
+	protected Coordinates coordinates;
 
-    /**
-     * Sets the value of the altitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setAltitude(BigDecimal value) {
-        this.altitude = value;
-    }
+	protected BigInteger precision;
+	protected String id;
+	
+	protected String srsName;
 
-    /**
-     * Gets the value of the coordinates property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Coordinates }
-     *     
-     */
-    public Coordinates getCoordinates() {
-        return coordinates;
-    }
+	/**
+	 * Gets the value of the longitude property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getLongitude() {
+		return longitude;
+	}
 
-    /**
-     * Sets the value of the coordinates property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Coordinates }
-     *     
-     */
-    public void setCoordinates(Coordinates value) {
-        this.coordinates = value;
-    }
+	/**
+	 * Sets the value of the longitude property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setLongitude(BigDecimal value) {
+		this.longitude = value;
+	}
 
-    /**
-     * Gets the value of the precision property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getPrecision() {
-        return precision;
-    }
+	/**
+	 * Gets the value of the latitude property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getLatitude() {
+		return latitude;
+	}
 
-    /**
-     * Sets the value of the precision property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setPrecision(BigInteger value) {
-        this.precision = value;
-    }
+	/**
+	 * Sets the value of the latitude property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setLatitude(BigDecimal value) {
+		this.latitude = value;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the altitude property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getAltitude() {
+		return altitude;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the altitude property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setAltitude(BigDecimal value) {
+		this.altitude = value;
+	}
 
-    /**
-     * Gets the value of the srsName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSrsName() {
-        return srsName;
-    }
+	/**
+	 * Gets the value of the coordinates property.
+	 * 
+	 * @return possible object is {@link Coordinates }
+	 * 
+	 */
+	public Coordinates getCoordinates() {
+		return coordinates;
+	}
 
-    /**
-     * Sets the value of the srsName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSrsName(String value) {
-        this.srsName = value;
-    }
+	/**
+	 * Sets the value of the coordinates property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Coordinates }
+	 * 
+	 */
+	public void setCoordinates(Coordinates value) {
+		this.coordinates = value;
+	}
+
+	/**
+	 * Gets the value of the precision property.
+	 * 
+	 * @return possible object is {@link BigInteger }
+	 * 
+	 */
+	public BigInteger getPrecision() {
+		return precision;
+	}
+
+	/**
+	 * Sets the value of the precision property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigInteger }
+	 * 
+	 */
+	public void setPrecision(BigInteger value) {
+		this.precision = value;
+	}
+
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
+
+	/**
+	 * Gets the value of the srsName property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSrsName() {
+		return srsName;
+	}
+
+	/**
+	 * Sets the value of the srsName property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSrsName(String value) {
+		this.srsName = value;
+	}
 
 }

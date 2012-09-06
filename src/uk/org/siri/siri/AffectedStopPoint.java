@@ -14,7 +14,7 @@ import uk.org.ifopt.acsb.AccessibilityAssessment;
 public class AffectedStopPoint {
 
 
-	protected StopPointRef stopPointRef;
+	protected String stopPointRef;
 
 	protected String privateRef;
 
@@ -42,7 +42,7 @@ public class AffectedStopPoint {
 	 * @return possible object is {@link StopPointRef }
 	 * 
 	 */
-	public StopPointRef getStopPointRef() {
+	public String getStopPointRef() {
 		return stopPointRef;
 	}
 
@@ -53,7 +53,7 @@ public class AffectedStopPoint {
 	 *            allowed object is {@link StopPointRef }
 	 * 
 	 */
-	public void setStopPointRef(StopPointRef value) {
+	public void setStopPointRef(String value) {
 		this.stopPointRef = value;
 	}
 
