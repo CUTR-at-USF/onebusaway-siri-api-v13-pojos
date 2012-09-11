@@ -72,38 +72,13 @@ public class MonitoredCall {
 	protected int visitNumber;
 	
 	protected String stopPointName;
-	
-	
-	public Boolean getBoardingStretch() {
-		return boardingStretch;
-	}
-	
-	public Boolean getPlatformTraversal() {
-		return platformTraversal;
-	}
-	
-	public Boolean getRequestStop() {
-		return requestStop;
-	}
-	
-	public Boolean getReversesAtStop() {
-		return reversesAtStop;
-	}
-	
+		
 	public String getStopPointName() {
 		return stopPointName;
 	}
 	
 	public String getStopPointRef() {
 		return stopPointRef;
-	}
-	
-	public Boolean getTimingPoint() {
-		return timingPoint;
-	}
-	
-	public Boolean getVehicleAtStop() {
-		return vehicleAtStop;
 	}
 	
 	public int getVisitNumber() {
