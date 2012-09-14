@@ -9,6 +9,8 @@ public class VehicleMonitoringDelivery{
 	private Date responseTimestamp;
    	private Date validUntil;
    	private List<VehicleActivity> vehicleActivity;
+   	
+   	private ErrorCondition errorCondition;
    	   	
  	public Date getResponseTimestamp(){
 		return this.responseTimestamp;
@@ -32,5 +34,13 @@ public class VehicleMonitoringDelivery{
    	
 	public void setVehicleActivity(List<VehicleActivity> vehicleActivity){
 		this.vehicleActivity = vehicleActivity;
+	}
+	
+	public ErrorCondition getErrorCondition() {
+		return errorCondition;
+	}
+	
+	public void setErrorCondition(ErrorCondition errorCondition) {
+		this.errorCondition = errorCondition;
 	}
 }

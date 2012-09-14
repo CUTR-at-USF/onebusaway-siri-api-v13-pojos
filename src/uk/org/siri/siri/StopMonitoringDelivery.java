@@ -9,6 +9,8 @@ public class StopMonitoringDelivery{
    	private List<MonitoredStopVisit> monitoredStopVisit;
    	private Date responseTimestamp;
    	private Date validUntil;
+   	
+   	private ErrorCondition errorCondition;
    	   	
  	public List<MonitoredStopVisit> getMonitoredStopVisit(){
 		return this.monitoredStopVisit;
@@ -32,5 +34,13 @@ public class StopMonitoringDelivery{
    	
 	public void setValidUntil(Date validUntil){
 		this.validUntil = validUntil;
+	}
+	
+	public ErrorCondition getErrorCondition() {
+		return errorCondition;
+	}
+	
+	public void setErrorCondition(ErrorCondition errorCondition) {
+		this.errorCondition = errorCondition;
 	}
 }

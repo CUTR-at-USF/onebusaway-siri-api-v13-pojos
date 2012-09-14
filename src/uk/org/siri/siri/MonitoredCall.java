@@ -31,9 +31,9 @@ public class MonitoredCall {
 
 	protected Boolean requestStop;
 
-	protected NaturalLanguageString destinationDisplay;
+	protected String destinationDisplay;
 
-	protected List<NaturalLanguageString> callNote;
+	protected List<String> callNote;
 
 	protected List<FacilityCondition> facilityCondition;
 
@@ -47,7 +47,7 @@ public class MonitoredCall {
 
 	protected ProgressStatusEnumeration arrivalStatus;
 
-	protected NaturalLanguageString arrivalPlatformName;
+	protected String arrivalPlatformName;
 
 	protected ArrivalBoardingActivityEnumeration arrivalBoardingActivity;
 
@@ -57,7 +57,7 @@ public class MonitoredCall {
 
 	protected ProgressStatusEnumeration departureStatus;
 
-	protected NaturalLanguageString departurePlatformName;
+	protected String departurePlatformName;
 
 	protected DepartureBoardingActivityEnumeration departureBoardingActivity;
 
@@ -85,7 +85,7 @@ public class MonitoredCall {
 		return visitNumber;
 	}
 	
-	public void setCallNote(List<NaturalLanguageString> callNote) {
+	public void setCallNote(List<String> callNote) {
 		this.callNote = callNote;
 	}
 	
@@ -297,11 +297,11 @@ public class MonitoredCall {
 	/**
 	 * Gets the value of the destinationDisplay property.
 	 * 
-	 * @return possible object is {@link NaturalLanguageString }
+	 * @return possible object is {@link String }
 	 * 
 	 */
 	
-	public NaturalLanguageString getDestinationDisplay() {
+	public String getDestinationDisplay() {
 		return destinationDisplay;
 	}
 
@@ -309,11 +309,11 @@ public class MonitoredCall {
 	 * Sets the value of the destinationDisplay property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link NaturalLanguageString }
+	 *            allowed object is {@link String }
 	 * 
 	 */
 	
-	public void setDestinationDisplay(NaturalLanguageString value) {
+	public void setDestinationDisplay(String value) {
 		this.destinationDisplay = value;
 	}
 
@@ -336,14 +336,14 @@ public class MonitoredCall {
 	 * 
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list
-	 * {@link NaturalLanguageString }
+	 * {@link String }
 	 * 
 	 * 
 	 */
 	
-	public List<NaturalLanguageString> getCallNote() {
+	public List<String> getCallNote() {
 		if (callNote == null) {
-			callNote = new ArrayList<NaturalLanguageString>();
+			callNote = new ArrayList<String>();
 		}
 		return this.callNote;
 	}
@@ -530,11 +530,11 @@ public class MonitoredCall {
 	/**
 	 * Gets the value of the arrivalPlatformName property.
 	 * 
-	 * @return possible object is {@link NaturalLanguageString }
+	 * @return possible object is {@link String }
 	 * 
 	 */
 	
-	public NaturalLanguageString getArrivalPlatformName() {
+	public String getArrivalPlatformName() {
 		return arrivalPlatformName;
 	}
 
@@ -542,11 +542,11 @@ public class MonitoredCall {
 	 * Sets the value of the arrivalPlatformName property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link NaturalLanguageString }
+	 *            allowed object is {@link String }
 	 * 
 	 */
 	
-	public void setArrivalPlatformName(NaturalLanguageString value) {
+	public void setArrivalPlatformName(String value) {
 		this.arrivalPlatformName = value;
 	}
 
@@ -669,11 +669,11 @@ public class MonitoredCall {
 	/**
 	 * Gets the value of the departurePlatformName property.
 	 * 
-	 * @return possible object is {@link NaturalLanguageString }
+	 * @return possible object is {@link String }
 	 * 
 	 */
 	
-	public NaturalLanguageString getDeparturePlatformName() {
+	public String getDeparturePlatformName() {
 		return departurePlatformName;
 	}
 
@@ -681,11 +681,11 @@ public class MonitoredCall {
 	 * Sets the value of the departurePlatformName property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link NaturalLanguageString }
+	 *            allowed object is {@link String }
 	 * 
 	 */
 	
-	public void setDeparturePlatformName(NaturalLanguageString value) {
+	public void setDeparturePlatformName(String value) {
 		this.departurePlatformName = value;
 	}
 
