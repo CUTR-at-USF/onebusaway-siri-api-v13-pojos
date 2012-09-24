@@ -6,7 +6,7 @@ public class Context {
 
 	protected CountryRef countryRef;
 
-	protected ParticipantRef participantRef;
+	protected String participantRef;
 	protected String topographicPlaceRef;
 
 	protected NaturalLanguageString topographicPlaceName;
@@ -46,7 +46,7 @@ public class Context {
 	 * @return possible object is {@link ParticipantRef }
 	 * 
 	 */
-	public ParticipantRef getParticipantRef() {
+	public String getParticipantRef() {
 		return participantRef;
 	}
 
@@ -57,7 +57,7 @@ public class Context {
 	 *            allowed object is {@link ParticipantRef }
 	 * 
 	 */
-	public void setParticipantRef(ParticipantRef value) {
+	public void setParticipantRef(String value) {
 		this.participantRef = value;
 	}
 

@@ -1,5 +1,7 @@
 package eu.datex2.schema._1_0._1_0;
 
+import uk.org.siri.siri.PersonnelReasonEnumeration;
+
 public enum SourceTypeEnum {
 
 
@@ -162,18 +164,21 @@ public enum SourceTypeEnum {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static SourceTypeEnum fromString(String v) {
+		if (v != null) {
+			for (SourceTypeEnum c : SourceTypeEnum.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static SourceTypeEnum fromValue(String v) {
-        for (SourceTypeEnum c: SourceTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }
 

@@ -14,34 +14,12 @@ public class References {
 
 	protected List<RelatedSituation> relatedToRef;
 
-	/**
-	 * Gets the value of the relatedToRef property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a
-	 * snapshot. Therefore any modification you make to the returned list will
-	 * be present inside the JAXB object. This is why there is not a
-	 * <CODE>set</CODE> method for the relatedToRef property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getRelatedToRef().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list
-	 * {@link RelatedSituation }
-	 * 
-	 * 
-	 */
 	public List<RelatedSituation> getRelatedToRef() {
-		if (relatedToRef == null) {
-			relatedToRef = new ArrayList<RelatedSituation>();
-		}
-		return this.relatedToRef;
+		return relatedToRef;
+	}
+	
+	public void setRelatedToRef(List<RelatedSituation> relatedToRef) {
+		this.relatedToRef = relatedToRef;
 	}
 
 }

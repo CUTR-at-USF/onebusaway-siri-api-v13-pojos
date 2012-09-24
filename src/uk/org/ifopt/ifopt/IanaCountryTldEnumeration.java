@@ -8,6 +8,8 @@
 
 package uk.org.ifopt.ifopt;
 
+import uk.org.siri.siri.VehicleModesOfTransportEnumeration;
+
 
 public enum IanaCountryTldEnumeration {
 
@@ -1753,17 +1755,20 @@ public enum IanaCountryTldEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static IanaCountryTldEnumeration fromString(String v) {
+		if (v != null) {
+			for (IanaCountryTldEnumeration c : IanaCountryTldEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static IanaCountryTldEnumeration fromValue(String v) {
-        for (IanaCountryTldEnumeration c: IanaCountryTldEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

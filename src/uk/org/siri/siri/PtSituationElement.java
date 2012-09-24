@@ -64,9 +64,9 @@ public class PtSituationElement extends SituationElement {
 
 	protected String language;
 
-	protected String summary;
+	protected NaturalLanguageString summary;
 
-	protected String description;
+	protected NaturalLanguageString description;
 
 	protected String detail;
 
@@ -690,7 +690,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public String getSummary() {
+	public NaturalLanguageString getSummary() {
 		return summary;
 	}
 
@@ -701,7 +701,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setSummary(String value) {
+	public void setSummary(NaturalLanguageString value) {
 		this.summary = value;
 	}
 
@@ -711,7 +711,7 @@ public class PtSituationElement extends SituationElement {
 	 * @return possible object is {@link DefaultedText }
 	 * 
 	 */
-	public String getDescription() {
+	public NaturalLanguageString getDescription() {
 		return description;
 	}
 
@@ -722,7 +722,7 @@ public class PtSituationElement extends SituationElement {
 	 *            allowed object is {@link DefaultedText }
 	 * 
 	 */
-	public void setDescription(String value) {
+	public void setDescription(NaturalLanguageString value) {
 		this.description = value;
 	}
 

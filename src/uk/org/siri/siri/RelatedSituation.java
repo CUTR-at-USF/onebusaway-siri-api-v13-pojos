@@ -12,13 +12,13 @@ public class RelatedSituation {
     
     protected CountryRef countryRef;
     
-    protected ParticipantRef participantRef;
+    protected String participantRef;
     
-    protected EntryQualifier situationNumber;
+    protected String situationNumber;
     
     protected CountryRef updateCountryRef;
     
-    protected ParticipantRef updateParticipantRef;
+    protected String updateParticipantRef;
     
     protected SituationVersion version;
     
@@ -81,10 +81,10 @@ public class RelatedSituation {
      * 
      * @return
      *     possible object is
-     *     {@link ParticipantRef }
+     *     {@link String }
      *     
      */
-    public ParticipantRef getParticipantRef() {
+    public String getParticipantRef() {
         return participantRef;
     }
 
@@ -93,10 +93,10 @@ public class RelatedSituation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ParticipantRef }
+     *     {@link String }
      *     
      */
-    public void setParticipantRef(ParticipantRef value) {
+    public void setParticipantRef(String value) {
         this.participantRef = value;
     }
 
@@ -105,10 +105,10 @@ public class RelatedSituation {
      * 
      * @return
      *     possible object is
-     *     {@link EntryQualifier }
+     *     {@link String }
      *     
      */
-    public EntryQualifier getSituationNumber() {
+    public String getSituationNumber() {
         return situationNumber;
     }
 
@@ -117,10 +117,10 @@ public class RelatedSituation {
      * 
      * @param value
      *     allowed object is
-     *     {@link EntryQualifier }
+     *     {@link String }
      *     
      */
-    public void setSituationNumber(EntryQualifier value) {
+    public void setSituationNumber(String value) {
         this.situationNumber = value;
     }
 
@@ -153,10 +153,10 @@ public class RelatedSituation {
      * 
      * @return
      *     possible object is
-     *     {@link ParticipantRef }
+     *     {@link String }
      *     
      */
-    public ParticipantRef getUpdateParticipantRef() {
+    public String getUpdateParticipantRef() {
         return updateParticipantRef;
     }
 
@@ -165,10 +165,10 @@ public class RelatedSituation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ParticipantRef }
+     *     {@link String }
      *     
      */
-    public void setUpdateParticipantRef(ParticipantRef value) {
+    public void setUpdateParticipantRef(String value) {
         this.updateParticipantRef = value;
     }
 

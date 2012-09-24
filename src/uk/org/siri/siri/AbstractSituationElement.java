@@ -18,13 +18,13 @@ public class AbstractSituationElement {
    
     protected CountryRef countryRef;
    
-    protected ParticipantRef participantRef;
+    protected String participantRef;
    
     protected String situationNumber;
    
     protected CountryRef updateCountryRef;
    
-    protected ParticipantRef updateParticipantRef;
+    protected String updateParticipantRef;
    
     protected SituationVersion version;
 
@@ -84,7 +84,7 @@ public class AbstractSituationElement {
      *     {@link ParticipantRef }
      *     
      */
-    public ParticipantRef getParticipantRef() {
+    public String getParticipantRef() {
         return participantRef;
     }
 
@@ -96,7 +96,7 @@ public class AbstractSituationElement {
      *     {@link ParticipantRef }
      *     
      */
-    public void setParticipantRef(ParticipantRef value) {
+    public void setParticipantRef(String value) {
         this.participantRef = value;
     }
 
@@ -156,7 +156,7 @@ public class AbstractSituationElement {
      *     {@link ParticipantRef }
      *     
      */
-    public ParticipantRef getUpdateParticipantRef() {
+    public String getUpdateParticipantRef() {
         return updateParticipantRef;
     }
 
@@ -168,7 +168,7 @@ public class AbstractSituationElement {
      *     {@link ParticipantRef }
      *     
      */
-    public void setUpdateParticipantRef(ParticipantRef value) {
+    public void setUpdateParticipantRef(String value) {
         this.updateParticipantRef = value;
     }
 

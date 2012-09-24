@@ -28,17 +28,20 @@ public enum RelatedToEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static RelatedToEnumeration fromString(String v) {
+		if (v != null) {
+			for (RelatedToEnumeration c : RelatedToEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static RelatedToEnumeration fromValue(String v) {
-        for (RelatedToEnumeration c: RelatedToEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

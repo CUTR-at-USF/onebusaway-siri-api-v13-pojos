@@ -10,9 +10,8 @@ package uk.org.siri.siri;
 
 public class NaturalLanguageString {
 
-
+   
     protected String value;
-
     protected String lang;
     
     public NaturalLanguageString(String value) {
