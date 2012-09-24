@@ -267,17 +267,20 @@ public enum EnvironmentReasonEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static EnvironmentReasonEnumeration fromString(String v) {
+		if (v != null) {
+			for (EnvironmentReasonEnumeration c : EnvironmentReasonEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static EnvironmentReasonEnumeration fromValue(String v) {
-        for (EnvironmentReasonEnumeration c: EnvironmentReasonEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

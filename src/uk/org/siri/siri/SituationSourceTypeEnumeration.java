@@ -40,17 +40,20 @@ public enum SituationSourceTypeEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static SituationSourceTypeEnumeration fromString(String v) {
+		if (v != null) {
+			for (SituationSourceTypeEnumeration c : SituationSourceTypeEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static SituationSourceTypeEnumeration fromValue(String v) {
-        for (SituationSourceTypeEnumeration c: SituationSourceTypeEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

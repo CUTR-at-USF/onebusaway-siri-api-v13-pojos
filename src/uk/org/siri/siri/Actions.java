@@ -8,7 +8,6 @@
 
 package uk.org.siri.siri;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Actions {
@@ -34,257 +33,83 @@ public class Actions {
     
     protected Object extensions;
 
-    /**
-     * Gets the value of the publishToWebAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the publishToWebAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPublishToWebAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PublishToWebAction }
-     * 
-     * 
-     */
-    public List<PublishToWebAction> getPublishToWebAction() {
-        if (publishToWebAction == null) {
-            publishToWebAction = new ArrayList<PublishToWebAction>();
-        }
-        return this.publishToWebAction;
-    }
-
-    /**
-     * Gets the value of the publishToMobileAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the publishToMobileAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPublishToMobileAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PublishToMobileAction }
-     * 
-     * 
-     */
-    public List<PublishToMobileAction> getPublishToMobileAction() {
-        if (publishToMobileAction == null) {
-            publishToMobileAction = new ArrayList<PublishToMobileAction>();
-        }
-        return this.publishToMobileAction;
-    }
-
-    /**
-     * Gets the value of the publishToTvAction property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PublishToTvAction }
-     *     
-     */
-    public PublishToTvAction getPublishToTvAction() {
-        return publishToTvAction;
-    }
-
-    /**
-     * Sets the value of the publishToTvAction property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PublishToTvAction }
-     *     
-     */
-    public void setPublishToTvAction(PublishToTvAction value) {
-        this.publishToTvAction = value;
-    }
-
-    /**
-     * Gets the value of the publishToAlertsAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the publishToAlertsAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPublishToAlertsAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PublishToAlertsAction }
-     * 
-     * 
-     */
-    public List<PublishToAlertsAction> getPublishToAlertsAction() {
-        if (publishToAlertsAction == null) {
-            publishToAlertsAction = new ArrayList<PublishToAlertsAction>();
-        }
-        return this.publishToAlertsAction;
-    }
-
-    /**
-     * Gets the value of the manualAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the manualAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getManualAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ManualAction }
-     * 
-     * 
-     */
     public List<ManualAction> getManualAction() {
-        if (manualAction == null) {
-            manualAction = new ArrayList<ManualAction>();
-        }
-        return this.manualAction;
-    }
-
-    /**
-     * Gets the value of the notifyByEmailAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the notifyByEmailAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getNotifyByEmailAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link NotifyByEmailAction }
-     * 
-     * 
-     */
+		return manualAction;
+	}
+    
     public List<NotifyByEmailAction> getNotifyByEmailAction() {
-        if (notifyByEmailAction == null) {
-            notifyByEmailAction = new ArrayList<NotifyByEmailAction>();
-        }
-        return this.notifyByEmailAction;
-    }
-
-    /**
-     * Gets the value of the notifyBySmsAction property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NotifyBySmsAction }
-     *     
-     */
-    public NotifyBySmsAction getNotifyBySmsAction() {
-        return notifyBySmsAction;
-    }
-
-    /**
-     * Sets the value of the notifyBySmsAction property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NotifyBySmsAction }
-     *     
-     */
-    public void setNotifyBySmsAction(NotifyBySmsAction value) {
-        this.notifyBySmsAction = value;
-    }
-
-    /**
-     * Gets the value of the notifyByPagerAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the notifyByPagerAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getNotifyByPagerAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link NotifyByPagerAction }
-     * 
-     * 
-     */
+		return notifyByEmailAction;
+	}
+    
     public List<NotifyByPagerAction> getNotifyByPagerAction() {
-        if (notifyByPagerAction == null) {
-            notifyByPagerAction = new ArrayList<NotifyByPagerAction>();
-        }
-        return this.notifyByPagerAction;
-    }
-
-    /**
-     * Gets the value of the notifyUserAction property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the notifyUserAction property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getNotifyUserAction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link NotifyUserAction }
-     * 
-     * 
-     */
+		return notifyByPagerAction;
+	}
+    
+    public NotifyBySmsAction getNotifyBySmsAction() {
+		return notifyBySmsAction;
+	}
+    
     public List<NotifyUserAction> getNotifyUserAction() {
-        if (notifyUserAction == null) {
-            notifyUserAction = new ArrayList<NotifyUserAction>();
-        }
-        return this.notifyUserAction;
-    }
-
+		return notifyUserAction;
+	}
+    
+    public List<PublishToAlertsAction> getPublishToAlertsAction() {
+		return publishToAlertsAction;
+	}
+    
+    public List<PublishToMobileAction> getPublishToMobileAction() {
+		return publishToMobileAction;
+	}
+    
+    public PublishToTvAction getPublishToTvAction() {
+		return publishToTvAction;
+	}
+    
+    public void setManualAction(List<ManualAction> manualAction) {
+		this.manualAction = manualAction;
+	}
+    
+    public List<PublishToWebAction> getPublishToWebAction() {
+		return publishToWebAction;
+	}
+    
+    public void setNotifyByEmailAction(
+			List<NotifyByEmailAction> notifyByEmailAction) {
+		this.notifyByEmailAction = notifyByEmailAction;
+	}
+    
+    public void setNotifyByPagerAction(
+			List<NotifyByPagerAction> notifyByPagerAction) {
+		this.notifyByPagerAction = notifyByPagerAction;
+	}
+    
+    public void setNotifyBySmsAction(NotifyBySmsAction notifyBySmsAction) {
+		this.notifyBySmsAction = notifyBySmsAction;
+	}
+    
+    public void setNotifyUserAction(List<NotifyUserAction> notifyUserAction) {
+		this.notifyUserAction = notifyUserAction;
+	}
+    
+    public void setPublishToAlertsAction(
+			List<PublishToAlertsAction> publishToAlertsAction) {
+		this.publishToAlertsAction = publishToAlertsAction;
+	}
+    
+    public void setPublishToMobileAction(
+			List<PublishToMobileAction> publishToMobileAction) {
+		this.publishToMobileAction = publishToMobileAction;
+	}
+    
+    public void setPublishToTvAction(PublishToTvAction publishToTvAction) {
+		this.publishToTvAction = publishToTvAction;
+	}
+    
+    public void setPublishToWebAction(
+			List<PublishToWebAction> publishToWebAction) {
+		this.publishToWebAction = publishToWebAction;
+	}
+    
     /**
      * Gets the value of the extensions property.
      * 

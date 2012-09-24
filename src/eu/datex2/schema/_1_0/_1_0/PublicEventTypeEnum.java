@@ -8,6 +8,8 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import uk.org.siri.siri.ServiceConditionEnumeration;
+
 public enum PublicEventTypeEnum {
 
 
@@ -296,17 +298,20 @@ public enum PublicEventTypeEnum {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static PublicEventTypeEnum fromString(String v) {
+		if (v != null) {
+			for (PublicEventTypeEnum c : PublicEventTypeEnum.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static PublicEventTypeEnum fromValue(String v) {
-        for (PublicEventTypeEnum c: PublicEventTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

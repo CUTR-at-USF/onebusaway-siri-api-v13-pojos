@@ -8,6 +8,8 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import uk.org.siri.siri.ServiceConditionEnumeration;
+
 public enum ProbabilityOfOccurrenceEnum {
 
 
@@ -44,17 +46,20 @@ public enum ProbabilityOfOccurrenceEnum {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static ProbabilityOfOccurrenceEnum fromString(String v) {
+		if (v != null) {
+			for (ProbabilityOfOccurrenceEnum c : ProbabilityOfOccurrenceEnum.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static ProbabilityOfOccurrenceEnum fromValue(String v) {
-        for (ProbabilityOfOccurrenceEnum c: ProbabilityOfOccurrenceEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

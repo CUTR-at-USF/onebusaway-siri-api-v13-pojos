@@ -44,17 +44,20 @@ public enum ScopeTypeEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static ScopeTypeEnumeration fromString(String v) {
+		if (v != null) {
+			for (ScopeTypeEnumeration c : ScopeTypeEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static ScopeTypeEnumeration fromValue(String v) {
-        for (ScopeTypeEnumeration c: ScopeTypeEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

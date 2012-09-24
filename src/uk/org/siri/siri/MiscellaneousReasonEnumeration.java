@@ -581,17 +581,20 @@ public enum MiscellaneousReasonEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static MiscellaneousReasonEnumeration fromString(String v) {
+		if (v != null) {
+			for (MiscellaneousReasonEnumeration c : MiscellaneousReasonEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static MiscellaneousReasonEnumeration fromValue(String v) {
-        for (MiscellaneousReasonEnumeration c: MiscellaneousReasonEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

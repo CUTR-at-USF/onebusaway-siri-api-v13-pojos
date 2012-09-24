@@ -28,17 +28,20 @@ public enum AudienceEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static AudienceEnumeration fromString(String v) {
+		if (v != null) {
+			for (AudienceEnumeration c : AudienceEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static AudienceEnumeration fromValue(String v) {
-        for (AudienceEnumeration c: AudienceEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

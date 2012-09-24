@@ -358,17 +358,20 @@ public enum EquipmentReasonEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static EquipmentReasonEnumeration fromString(String v) {
+		if (v != null) {
+			for (EquipmentReasonEnumeration c : EquipmentReasonEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static EquipmentReasonEnumeration fromValue(String v) {
-        for (EquipmentReasonEnumeration c: EquipmentReasonEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

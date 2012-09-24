@@ -8,7 +8,6 @@
 
 package uk.org.siri.siri;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PtConsequences {
@@ -16,33 +15,12 @@ public class PtConsequences {
     
     protected List<PtConsequence> consequence;
 
-    /**
-     * Gets the value of the consequence property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the consequence property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getConsequence().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PtConsequence }
-     * 
-     * 
-     */
     public List<PtConsequence> getConsequence() {
-        if (consequence == null) {
-            consequence = new ArrayList<PtConsequence>();
-        }
-        return this.consequence;
-    }
+		return consequence;
+	}
+    
+    public void setConsequence(List<PtConsequence> consequence) {
+		this.consequence = consequence;
+	}
 
 }

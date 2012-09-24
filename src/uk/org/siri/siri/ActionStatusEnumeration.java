@@ -22,17 +22,21 @@ public enum ActionStatusEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static ActionStatusEnumeration fromString(String v) {
+		if (v != null) {
+			for (ActionStatusEnumeration c : ActionStatusEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static ActionStatusEnumeration fromValue(String v) {
-        for (ActionStatusEnumeration c: ActionStatusEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
+
 
 }

@@ -34,13 +34,20 @@ public enum VerificationStatusEnumeration {
         return value;
     }
 
-    public static VerificationStatusEnumeration fromValue(String v) {
-        for (VerificationStatusEnumeration c: VerificationStatusEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+    public static VerificationStatusEnumeration fromString(String v) {
+		if (v != null) {
+			for (VerificationStatusEnumeration c : VerificationStatusEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

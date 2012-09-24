@@ -28,17 +28,20 @@ public enum WorkflowStatusEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static WorkflowStatusEnumeration fromString(String v) {
+		if (v != null) {
+			for (WorkflowStatusEnumeration c : WorkflowStatusEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static WorkflowStatusEnumeration fromValue(String v) {
-        for (WorkflowStatusEnumeration c: WorkflowStatusEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

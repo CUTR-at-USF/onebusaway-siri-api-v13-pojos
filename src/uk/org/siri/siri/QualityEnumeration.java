@@ -45,17 +45,20 @@ public enum QualityEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static QualityEnumeration fromString(String v) {
+		if (v != null) {
+			for (QualityEnumeration c : QualityEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static QualityEnumeration fromValue(String v) {
-        for (QualityEnumeration c: QualityEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

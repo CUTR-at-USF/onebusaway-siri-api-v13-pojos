@@ -50,7 +50,7 @@ public class RoadSituationElement extends SituationElement {
 
 	protected PublicEventTypeEnum publicEventReason;
 
-	protected NaturalLanguageString reasonName;
+	protected String reasonName;
 
 	protected SeverityEnumeration severity;
 	protected BigInteger priority;
@@ -449,10 +449,10 @@ public class RoadSituationElement extends SituationElement {
 	/**
 	 * Gets the value of the reasonName property.
 	 * 
-	 * @return possible object is {@link NaturalLanguageString }
+	 * @return possible object is {@link String }
 	 * 
 	 */
-	public NaturalLanguageString getReasonName() {
+	public String getReasonName() {
 		return reasonName;
 	}
 
@@ -460,10 +460,10 @@ public class RoadSituationElement extends SituationElement {
 	 * Sets the value of the reasonName property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link NaturalLanguageString }
+	 *            allowed object is {@link String }
 	 * 
 	 */
-	public void setReasonName(NaturalLanguageString value) {
+	public void setReasonName(String value) {
 		this.reasonName = value;
 	}
 
@@ -1090,34 +1090,12 @@ public class RoadSituationElement extends SituationElement {
 
 		protected List<DayTypeEnumeration> dayType;
 
-		/**
-		 * Gets the value of the dayType property.
-		 * 
-		 * <p>
-		 * This accessor method returns a reference to the live list, not a
-		 * snapshot. Therefore any modification you make to the returned list
-		 * will be present inside the JAXB object. This is why there is not a
-		 * <CODE>set</CODE> method for the dayType property.
-		 * 
-		 * <p>
-		 * For example, to add a new item, do as follows:
-		 * 
-		 * <pre>
-		 * getDayType().add(newItem);
-		 * </pre>
-		 * 
-		 * 
-		 * <p>
-		 * Objects of the following type(s) are allowed in the list
-		 * {@link DayTypeEnumeration }
-		 * 
-		 * 
-		 */
 		public List<DayTypeEnumeration> getDayType() {
-			if (dayType == null) {
-				dayType = new ArrayList<DayTypeEnumeration>();
-			}
-			return this.dayType;
+			return dayType;
+		}
+		
+		public void setDayType(List<DayTypeEnumeration> dayType) {
+			this.dayType = dayType;
 		}
 
 	}
@@ -1160,34 +1138,13 @@ public class RoadSituationElement extends SituationElement {
 	
 		protected List<RoadSituationElement.SecondaryReasons.Reason> reason;
 
-		/**
-		 * Gets the value of the reason property.
-		 * 
-		 * <p>
-		 * This accessor method returns a reference to the live list, not a
-		 * snapshot. Therefore any modification you make to the returned list
-		 * will be present inside the JAXB object. This is why there is not a
-		 * <CODE>set</CODE> method for the reason property.
-		 * 
-		 * <p>
-		 * For example, to add a new item, do as follows:
-		 * 
-		 * <pre>
-		 * getReason().add(newItem);
-		 * </pre>
-		 * 
-		 * 
-		 * <p>
-		 * Objects of the following type(s) are allowed in the list
-		 * {@link RoadSituationElement.SecondaryReasons.Reason }
-		 * 
-		 * 
-		 */
 		public List<RoadSituationElement.SecondaryReasons.Reason> getReason() {
-			if (reason == null) {
-				reason = new ArrayList<RoadSituationElement.SecondaryReasons.Reason>();
-			}
-			return this.reason;
+			return reason;
+		}
+		
+		public void setReason(
+				List<RoadSituationElement.SecondaryReasons.Reason> reason) {
+			this.reason = reason;
 		}
 
 		/**
@@ -1230,7 +1187,7 @@ public class RoadSituationElement extends SituationElement {
 			
 			protected PublicEventTypeEnum publicEventReason;
 			
-			protected NaturalLanguageString reasonName;
+			protected String reasonName;
 
 			/**
 			 * Gets the value of the unknownReason property.
@@ -1384,10 +1341,10 @@ public class RoadSituationElement extends SituationElement {
 			/**
 			 * Gets the value of the reasonName property.
 			 * 
-			 * @return possible object is {@link NaturalLanguageString }
+			 * @return possible object is {@link String }
 			 * 
 			 */
-			public NaturalLanguageString getReasonName() {
+			public String getReasonName() {
 				return reasonName;
 			}
 
@@ -1396,10 +1353,10 @@ public class RoadSituationElement extends SituationElement {
 			 * 
 			 * @param value
 			 *            allowed object is
-			 *            {@link NaturalLanguageString }
+			 *            {@link String }
 			 * 
 			 */
-			public void setReasonName(NaturalLanguageString value) {
+			public void setReasonName(String value) {
 				this.reasonName = value;
 			}
 

@@ -104,17 +104,20 @@ public enum DayTypeEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static DayTypeEnumeration fromString(String v) {
+		if (v != null) {
+			for (DayTypeEnumeration c : DayTypeEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static DayTypeEnumeration fromValue(String v) {
-        for (DayTypeEnumeration c: DayTypeEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

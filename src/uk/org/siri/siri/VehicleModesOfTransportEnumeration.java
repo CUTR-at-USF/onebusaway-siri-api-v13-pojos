@@ -179,17 +179,20 @@ public enum VehicleModesOfTransportEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static VehicleModesOfTransportEnumeration fromString(String v) {
+		if (v != null) {
+			for (VehicleModesOfTransportEnumeration c : VehicleModesOfTransportEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static VehicleModesOfTransportEnumeration fromValue(String v) {
-        for (VehicleModesOfTransportEnumeration c: VehicleModesOfTransportEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

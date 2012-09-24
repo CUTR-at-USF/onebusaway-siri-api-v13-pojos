@@ -26,17 +26,20 @@ public enum SensitivityEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static SensitivityEnumeration fromString(String v) {
+		if (v != null) {
+			for (SensitivityEnumeration c : SensitivityEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static SensitivityEnumeration fromValue(String v) {
-        for (SensitivityEnumeration c: SensitivityEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

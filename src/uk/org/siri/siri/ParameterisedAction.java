@@ -16,7 +16,7 @@ public class ParameterisedAction
 {
 
     
-    protected NaturalLanguageString description;
+    protected String description;
     
     protected List<ActionData> actionData;
 
@@ -25,10 +25,10 @@ public class ParameterisedAction
      * 
      * @return
      *     possible object is
-     *     {@link NaturalLanguageString }
+     *     {@link String }
      *     
      */
-    public NaturalLanguageString getDescription() {
+    public String getDescription() {
         return description;
     }
 
@@ -37,10 +37,10 @@ public class ParameterisedAction
      * 
      * @param value
      *     allowed object is
-     *     {@link NaturalLanguageString }
+     *     {@link String }
      *     
      */
-    public void setDescription(NaturalLanguageString value) {
+    public void setDescription(String value) {
         this.description = value;
     }
 

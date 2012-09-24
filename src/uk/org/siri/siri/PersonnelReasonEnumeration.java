@@ -115,17 +115,20 @@ public enum PersonnelReasonEnumeration {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static PersonnelReasonEnumeration fromString(String v) {
+		if (v != null) {
+			for (PersonnelReasonEnumeration c : PersonnelReasonEnumeration.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static PersonnelReasonEnumeration fromValue(String v) {
-        for (PersonnelReasonEnumeration c: PersonnelReasonEnumeration.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

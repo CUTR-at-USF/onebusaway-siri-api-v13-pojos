@@ -8,6 +8,8 @@
 
 package eu.datex2.schema._1_0._1_0;
 
+import uk.org.siri.siri.ServiceConditionEnumeration;
+
 public enum InformationStatusEnum {
 
 
@@ -44,17 +46,20 @@ public enum InformationStatusEnum {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
+    public static InformationStatusEnum fromString(String v) {
+		if (v != null) {
+			for (InformationStatusEnum c : InformationStatusEnum.values()) {
+				if (v.equalsIgnoreCase(c.toString())) {
+			          return c;
+			    }				
+			}
+		}
+		throw new IllegalArgumentException(v);
+	}
 
-    public static InformationStatusEnum fromValue(String v) {
-        for (InformationStatusEnum c: InformationStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }
