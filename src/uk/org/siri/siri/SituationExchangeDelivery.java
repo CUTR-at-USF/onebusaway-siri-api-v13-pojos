@@ -119,7 +119,7 @@ public class SituationExchangeDelivery {
         this.version = value;
     }
 
-    public class Situations {
+    public static class Situations {
         
         protected List<PtSituationElement> ptSituationElement;        
         //protected List<RoadSituationElement> roadSituationElement;
