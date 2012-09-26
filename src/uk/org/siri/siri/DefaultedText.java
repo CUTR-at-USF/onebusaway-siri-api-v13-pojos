@@ -8,6 +8,14 @@
 package uk.org.siri.siri;
 
 public class DefaultedText extends NaturalLanguageString {
+	
+	public DefaultedText() {
+		super();
+	}
+	
+	public DefaultedText(String value){
+		super(value);
+	}
 
 	protected Boolean overridden;
 
