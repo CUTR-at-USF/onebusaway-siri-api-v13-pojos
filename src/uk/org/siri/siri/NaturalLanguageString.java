@@ -13,16 +13,7 @@ public class NaturalLanguageString {
    
     protected String value;
     protected String lang;
-    
-    public NaturalLanguageString(String value) {
-		this.value = value;
-	}
-    
-    public NaturalLanguageString(String value, String lang) {
-		this.value = value;
-		this.lang = lang;
-	}
-
+  
     /**
      * A restriction of W3C XML Schema's string that requires at least one character of text. 
      * 
